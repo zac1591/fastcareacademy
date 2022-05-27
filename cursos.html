@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/styles.css" />
+		<link rel="stylesheet" href="css/modal.css" />
+		<script src="js/script.js" type="module" defer></script>
+		<title>Cursos</title>
+	</head>
+	<body>
+		<section class="main-content">
+			<h1 class="title-section">Nuestros cursos</h1>
+			<div class="programas-section">
+				<img
+					src="img/programas_academicos.jpg"
+					class="programas-academicos"
+					alt=""
+				/>
+				<h5>Dale un boost a tus conocimientos con nuestros cursos</h5>
+			</div>
+
+			<div class="search-wrapper">
+				<label for="search">Buscar cursos</label>
+				<input type="search" id="search" data-search />
+			</div>
+
+			<div class="cursos-cards" data-curso-cards-container></div>
+		</section>
+
+		<!-- card template -->
+		<template data-curso-template>
+			<div class="card">
+				<span data-card-id>
+					<img src="" class="course-img" data-course-img alt="" />
+					<div class="header" data-header></div>
+					<div class="body" data-body></div>
+				</span>
+			</div>
+		</template>
+
+		<!-- modal template -->
+		<template data-curso-modal-template>
+			<span>
+				<div class="modal" data-id>
+					<div class="modalHeader">
+						<div class="title" data-course-title></div>
+						<button data-close-button class="closeButton">&times;</button>
+					</div>
+					<div class="modalBody">
+						<div class="modalBodyContent">
+							<div class="white-side">
+								<h3>Sobre el curso</h3>
+								<p data-course-description></p>
+
+								<h3>Datos del curso</h3>
+								<h5 class="fecha-curso">
+									Fecha: <span data-fecha></span>
+								</h5>
+
+								<h5>Hora: <span data-hora></span></h5>
+								<h5>Lugar: Fast Care Base Escalón</h5>
+
+								<p>Paquetes:</p>
+								<ul class="paquetes-list">
+									<li data-price-regular></li>
+									<li data-price-pro></li>
+								</ul>
+								<h3>Aceptamos pagos con tarjeta</h3>
+								<p>
+									Pagos hasta 12 cuotas sin intereses con tarjetas de
+									crédito del Banco Agrícola
+								</p>
+								<em>Incluir logos visa y mastercard</em>
+							</div>
+							<div class="blue-side">
+								<h3>Temario</h3>
+								<ul class="temario-list">
+									<li data-temario-item></li>
+								</ul>
+
+								<h3>Pasos Para Inscribirse</h3>
+								<ol class="pasos-inscribirse">
+									<li>
+										Realizar el pago de su inscripción en cualquiera
+										de lo siguientes canales: pago en ventanilla, pago
+										con tarjeta vía call center al 2132 0580 o pago en
+										Banco Agricola a la cuenta corriente 5030488021 a
+										nombre de Fast Care SA de CV
+									</li>
+									<li></li>
+								</ol>
+							</div>
+						</div>
+					</div>
+				</div>
+			</span>
+		</template>
+		<div id="dynamicModal"></div>
+		<div id="overlay"></div>
+	</body>
+</html>

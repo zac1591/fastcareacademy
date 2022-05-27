@@ -1,0 +1,118 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Roboto", sans-serif;
+	font-size: 16px;
+}
+
+/***************************************************************/
+/************************** Modals *****************************/
+/***************************************************************/
+
+.modal {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0);
+	transition: 200ms ease-in-out;
+	border: 1px solid #6a6359;
+	border-radius: 10px;
+	z-index: 10;
+	background-color: #fff;
+	width: 75%;
+	max-width: 80%;
+}
+
+.modal.active {
+	transform: translate(-50%, -50%) scale(1);
+}
+
+.modalHeader {
+	padding: 10px 15px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid #6a6359;
+}
+
+.modalHeader .title {
+	font-size: 1.25rem;
+	font-weight: bold;
+}
+
+.modalHeader .closeButton {
+	cursor: pointer;
+	border: none;
+	outline: none;
+	background: none;
+	font-size: 1.25rem;
+	font-weight: bold;
+}
+
+.modalBody {
+	padding: 10px 15px;
+}
+
+.modalBodyContent {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 1rem;
+}
+
+.white-side {
+	/* background: yellow; */
+	padding: 1rem;
+	flex: 1 1 400px;
+}
+
+.blue-side {
+	/* background: red; */
+	flex: 1 1 300px;
+	padding: 1rem;
+}
+
+.temario-list {
+	list-style-position: inside;
+}
+
+.pasos-inscribirse {
+	list-style-position: inside;
+}
+
+.paquetes-list {
+	list-style-position: inside;
+}
+
+.modalBodyContent > h4 {
+	font-size: 1.1rem;
+	line-height: 1.2;
+	font-weight: 300;
+}
+
+#overlay {
+	position: fixed;
+	opacity: 0;
+	transition: 200ms ease-in-out;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	pointer-events: none;
+}
+
+#overlay.active {
+	opacity: 1;
+	pointer-events: all;
+}
+
+/***************************************************************/
+/************************** Fin Modals *****************************/
+/***************************************************************/
